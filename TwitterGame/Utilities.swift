@@ -11,10 +11,10 @@ import TwitterKit
 
 
 class Utilities {
-    static func downloadTwitterData(completion: @escaping(_ tweets: [Tweet]) -> ()) {
+    static func downloadTwitterData(handle:String, completion: @escaping(_ tweets: [Tweet]) -> ()) {
         var tweetArr = [Tweet]()
         let client = TWTRAPIClient()
-        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2"
+        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=\(handle)&count=2"
         var clientError : NSError?
         
         let request = client.urlRequest(withMethod: "GET", url: endpoint, parameters: nil, error: &clientError)
@@ -29,7 +29,7 @@ class Utilities {
             for element in json! {
                 let newTweet = Tweet(tweet: element["text"] as! String)
                 tweetArr.append(newTweet)
-                print(newTweet.tweetStr)
+                print(newTweet.tweetStr + "\n")
             }
             completion(tweetArr)
         }
