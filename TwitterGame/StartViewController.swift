@@ -22,6 +22,14 @@ class StartViewController: UIViewController {
     
     func initiateSentimentAnalysisAPI() {
         
+        //Insert tweet here to add '+'
+        let string = "This is my string"
+        
+        let newString = string.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        
+        //
+        
+        //New Tweet goes in here
         let urlString = "https://twinword-sentiment-analysis.p.mashape.com/analyze/?text=great+value+in+its+price+range!"
         let url = URL(string: urlString)
         
