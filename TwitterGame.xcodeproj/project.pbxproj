@@ -12,9 +12,13 @@
 		8CC3BD9E1F2119E100FBBBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC3BD9C1F2119E100FBBBC2 /* Main.storyboard */; };
 		8CC3BDA01F2119E100FBBBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC3BD9F1F2119E100FBBBC2 /* Assets.xcassets */; };
 		8CC3BDA31F2119E100FBBBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC3BDA11F2119E100FBBBC2 /* LaunchScreen.storyboard */; };
+		E860DF86A2AFDB0AC5B1A4AE /* Pods_TwitterGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB2B98FDEF04058E1D3D19D /* Pods_TwitterGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B11E93FC952F38BC214E92D /* Pods-TwitterGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterGame/Pods-TwitterGame.release.xcconfig"; sourceTree = "<group>"; };
+		4EB2B98FDEF04058E1D3D19D /* Pods_TwitterGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9A90C9F9716C47B6CF455B /* Pods-TwitterGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterGame/Pods-TwitterGame.debug.xcconfig"; sourceTree = "<group>"; };
 		8CC3BD951F2119E100FBBBC2 /* TwitterGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC3BD981F2119E100FBBBC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC3BD9A1F2119E100FBBBC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E860DF86A2AFDB0AC5B1A4AE /* Pods_TwitterGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C7711AC05F86C9245AA5306 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F9A90C9F9716C47B6CF455B /* Pods-TwitterGame.debug.xcconfig */,
+				3B11E93FC952F38BC214E92D /* Pods-TwitterGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6EAEE8BCAB0A29AC82A77C18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB2B98FDEF04058E1D3D19D /* Pods_TwitterGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CC3BD8C1F2119E100FBBBC2 = {
 			isa = PBXGroup;
 			children = (
 				8CC3BD971F2119E100FBBBC2 /* TwitterGame */,
 				8CC3BD961F2119E100FBBBC2 /* Products */,
+				0C7711AC05F86C9245AA5306 /* Pods */,
+				6EAEE8BCAB0A29AC82A77C18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CC3BDA71F2119E100FBBBC2 /* Build configuration list for PBXNativeTarget "TwitterGame" */;
 			buildPhases = (
+				46F00A1A0324BD690978FFC3 /* [CP] Check Pods Manifest.lock */,
 				8CC3BD911F2119E100FBBBC2 /* Sources */,
 				8CC3BD921F2119E100FBBBC2 /* Frameworks */,
 				8CC3BD931F2119E100FBBBC2 /* Resources */,
+				A47489680A73590DBF33E859 /* [CP] Embed Pods Frameworks */,
+				46BC78FAC26455D852F288C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46BC78FAC26455D852F288C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitterGame/Pods-TwitterGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F00A1A0324BD690978FFC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A47489680A73590DBF33E859 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitterGame/Pods-TwitterGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8CC3BD911F2119E100FBBBC2 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		8CC3BDA81F2119E100FBBBC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F9A90C9F9716C47B6CF455B /* Pods-TwitterGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5C8D6R84CB;
@@ -272,6 +348,7 @@
 		};
 		8CC3BDA91F2119E100FBBBC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B11E93FC952F38BC214E92D /* Pods-TwitterGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5C8D6R84CB;
