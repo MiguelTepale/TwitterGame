@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller Scene-->
+        <scene sceneID="jq9-7f-lcv">
+            <objects>
+                <viewController storyboardIdentifier="GameVC" title="Game View Controller Scene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Db-g5-m6z" customClass="GameViewController" customModule="TwitterGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o8M-kd-7mu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iba-hl-kts"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fQ0-DI-hW4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="wQ3-IE-yMa" kind="show" identifier="segueToResultsVC" id="aYr-IE-r1P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tlv-95-JbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="-195"/>
+        </scene>
+        <!--ResultsVC-->
+        <scene sceneID="bQo-yc-OL4">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ResultsVC" storyboardName="Results" referencedIdentifier="ResultsVC" id="wQ3-IE-yMa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2d-sW-MFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="-196"/>
+        </scene>
+    </scenes>
+</document>
