@@ -17,6 +17,9 @@
 		8CC3BDB81F21338200FBBBC2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC3BDB71F21338200FBBBC2 /* StartViewController.swift */; };
 		8CC3BDBA1F2133AD00FBBBC2 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC3BDB91F2133AD00FBBBC2 /* ResultsViewController.swift */; };
 		E860DF86A2AFDB0AC5B1A4AE /* Pods_TwitterGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB2B98FDEF04058E1D3D19D /* Pods_TwitterGame.framework */; };
+		E8E12EE61F2145BA006F99DA /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E12EE51F2145BA006F99DA /* Tweet.swift */; };
+		E8E12EE81F2154F7006F99DA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E12EE71F2154F7006F99DA /* Utilities.swift */; };
+		E8E12EEA1F2155DB006F99DA /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E12EE91F2155DB006F99DA /* DAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		8CC3BDB51F212F9200FBBBC2 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		8CC3BDB71F21338200FBBBC2 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8CC3BDB91F2133AD00FBBBC2 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		E8E12EE51F2145BA006F99DA /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		E8E12EE71F2154F7006F99DA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E8E12EE91F2155DB006F99DA /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				8CC3BD981F2119E100FBBBC2 /* AppDelegate.swift */,
+				E8E12EE51F2145BA006F99DA /* Tweet.swift */,
+				E8E12EE71F2154F7006F99DA /* Utilities.swift */,
+				E8E12EE91F2155DB006F99DA /* DAO.swift */,
 				8CC3BDB71F21338200FBBBC2 /* StartViewController.swift */,
 				8CC3BDB31F212AA900FBBBC2 /* GameViewController.swift */,
 				8CC3BDB91F2133AD00FBBBC2 /* ResultsViewController.swift */,
@@ -226,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E12EEA1F2155DB006F99DA /* DAO.swift in Sources */,
+				E8E12EE81F2154F7006F99DA /* Utilities.swift in Sources */,
 				8CC3BDB41F212AA900FBBBC2 /* GameViewController.swift in Sources */,
+				E8E12EE61F2145BA006F99DA /* Tweet.swift in Sources */,
 				8CC3BD991F2119E100FBBBC2 /* AppDelegate.swift in Sources */,
 				8CC3BDB81F21338200FBBBC2 /* StartViewController.swift in Sources */,
 				8CC3BDBA1F2133AD00FBBBC2 /* ResultsViewController.swift in Sources */,
