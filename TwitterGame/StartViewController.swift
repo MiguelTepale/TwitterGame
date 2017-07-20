@@ -11,18 +11,12 @@ import TwitterKit
 
 class StartViewController: UIViewController {
     
-        let client = TWTRAPIClient()
+    let mysharedManager = DAO.sharedManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//         Do any additional setup after loading the view.
+        mysharedManager.downloadTweets()
         
-                let client = TWTRAPIClient()
-                let tweetIDs = ["20", "510908133917487104"]
-                client.loadTweets(withIDs: tweetIDs) { (tweets, error) -> Void in
-                    // handle the response or error
-                    //print(tweets)
-                }
     }
 }
