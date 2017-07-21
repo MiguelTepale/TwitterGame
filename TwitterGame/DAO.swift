@@ -15,10 +15,11 @@ class DAO {
     var tweetsArray = [Tweet]()
     var twitterHandles = [String]()
     var numCorrect = 0
-    
+    var tweeter:String?
     
     func downloadTweets(completion: @escaping () -> ()) {
         let randomHandle = getRandomHandle()
+        tweeter = randomHandle
         Utilities.downloadTwitterData(handle: randomHandle, completion: { (tweets) in
             self.tweetsArray = tweets
             completion()
