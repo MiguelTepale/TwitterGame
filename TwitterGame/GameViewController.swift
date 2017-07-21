@@ -13,23 +13,28 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        testSentimentAnalysis()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func testSentimentAnalysis() {
+        
+        
+        let urlString = "https://twinword-sentiment-analysis.p.mashape.com/analyze/?text=great+value+in+its+price+range!"
+        let url = URL(string: urlString)
+        
+        var request = URLRequest(url: url!)
+        request.setValue("X-Mashape-Key", forHTTPHeaderField: "hGaVDVWgzMmsh6XN8RaifWxSAjKop1vUECRjsnXRPzlJAyJiWS")
+        request.setValue("Accept", forHTTPHeaderField: "application/json")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let urlData = data, error == nil else {
+                return
+            }
+            
+            let json = try? JSONSerialization.jsonObject(with: urlData, options: .mutableLeaves)
+            
+            print(json!)
+        }
+        .resume()
     }
-    */
-
 }

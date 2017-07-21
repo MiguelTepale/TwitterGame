@@ -16,11 +16,18 @@ class DAO {
     var twitterHandles = [String]()
     
     
-    func downloadTweets() {
+    func downloadTweets(completion: @escaping () -> ()) {
         let randomHandle = getRandomHandle()
         Utilities.downloadTwitterData(handle: randomHandle, completion: { (tweets) in
             self.tweetsArray = tweets
+            completion()
         })
+    }
+    
+    func getSentiments() {
+        for tweet in tweetsArray {
+            Utilities.initiateSentimentAnalysisAPI(tweet: tweet)
+        }
     }
     
     func getRandomHandle() -> String {

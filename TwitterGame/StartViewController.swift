@@ -17,14 +17,13 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         
         mysharedManager.loadDataFromTxtFile()
-        mysharedManager.downloadTweets()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        mysharedManager.downloadTweets(completion: {
+            self.mysharedManager.getSentiments()
+        })
+        
+        
     }
     
     
-
 }
