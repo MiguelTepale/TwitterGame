@@ -14,6 +14,7 @@ class DAO {
     
     var tweetsArray = [Tweet]()
     var twitterHandles = [String]()
+    var numCorrect = 0
     
     
     func downloadTweets(completion: @escaping () -> ()) {

@@ -66,7 +66,7 @@ class Utilities {
                 return
             }
             //Sentiment = [postive,negative,neutral]
-            guard let sentiment = json?["type"] as! String? else{
+            guard let sentiment = json?["type"] as! String! else{
                 print("'Sentiment' value is nil")
                 return
             }
