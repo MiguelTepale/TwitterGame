@@ -31,13 +31,13 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func playAgainButton(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: {
-            self.mysharedManager.tweetsArray.removeAll()
-            self.mysharedManager.numCorrect = 0
-            self.mysharedManager.downloadTweets(completion: {
-                self.mysharedManager.getSentiments()
-            })
+        self.mysharedManager.tweetsArray.removeAll()
+        self.mysharedManager.numCorrect = 0
+        self.mysharedManager.downloadTweets(completion: {
+            self.mysharedManager.getSentiments()
+            self.navigationController?.popViewController(animated: true)
         })
+        
     }
 
     override func didReceiveMemoryWarning() {
