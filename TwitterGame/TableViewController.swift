@@ -53,6 +53,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.performSegue(withIdentifier: "segueToDetailVC", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.0
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Passing Tweet object to DetailVC
         if segue.identifier == "segueToDetailVC" {

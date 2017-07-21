@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
             analysisText += "\(key): \(text)\n"
         }
         if tweet?.tweetBreakup.count == 0 {
-            analysisText = "There is nothing to be analyzed!"
+            analysisText += "There is nothing to be analyzed!"
         }
         analysisLabel.text = analysisText
     }

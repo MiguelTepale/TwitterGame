@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,25 +23,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is the tweet positive, negative, or neutral?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-4j-LbK">
-                                <rect key="frame" x="91" y="114" width="193" height="72"/>
+                                <rect key="frame" x="91" y="74" width="193" height="72"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGK-0r-UIL">
-                                <rect key="frame" x="50" y="236" width="275" height="22"/>
+                                <rect key="frame" x="50" y="166" width="275" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="F6j-0X-BEI">
-                                <rect key="frame" x="0.0" y="316.5" width="375" height="230"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="230"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-zs-Mac">
-                                <rect key="frame" x="16" y="554.5" width="343" height="41"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-zs-Mac">
+                                <rect key="frame" x="16" y="596" width="343" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsk-5u-nDa">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="41"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Positive"/>
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-SE-Mo4">
-                                        <rect key="frame" x="123" y="0.0" width="97" height="41"/>
+                                        <rect key="frame" x="116" y="0.0" width="90.5" height="41"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Neutral"/>
@@ -59,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBP-7f-vDA">
-                                        <rect key="frame" x="246" y="0.0" width="97" height="41"/>
+                                        <rect key="frame" x="228.5" y="0.0" width="114.5" height="41"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Negative"/>
@@ -72,20 +72,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="F6j-0X-BEI" firstAttribute="top" secondItem="IGK-0r-UIL" secondAttribute="bottom" constant="58.5" id="4vB-ya-YeJ"/>
-                            <constraint firstItem="IGK-0r-UIL" firstAttribute="top" secondItem="CxA-4j-LbK" secondAttribute="bottom" constant="50" id="8B4-L0-Lot"/>
-                            <constraint firstItem="6y5-zs-Mac" firstAttribute="top" secondItem="F6j-0X-BEI" secondAttribute="bottom" constant="8" id="9J7-y4-YeF"/>
+                            <constraint firstItem="F6j-0X-BEI" firstAttribute="top" secondItem="IGK-0r-UIL" secondAttribute="bottom" id="4vB-ya-YeJ"/>
+                            <constraint firstItem="IGK-0r-UIL" firstAttribute="top" secondItem="CxA-4j-LbK" secondAttribute="bottom" constant="20" id="8B4-L0-Lot"/>
                             <constraint firstItem="IGK-0r-UIL" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leading" constant="50" id="A15-7a-jcb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CxA-4j-LbK" secondAttribute="trailing" constant="75" id="C5U-b8-v4b"/>
                             <constraint firstItem="IGK-0r-UIL" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="KJD-SM-hbc"/>
+                            <constraint firstItem="Iba-hl-kts" firstAttribute="top" secondItem="6y5-zs-Mac" secondAttribute="bottom" constant="30" id="LHo-lW-q7A"/>
                             <constraint firstItem="F6j-0X-BEI" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="Rq5-3R-tmM"/>
                             <constraint firstItem="CxA-4j-LbK" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leadingMargin" constant="75" id="SY7-F2-CpW"/>
                             <constraint firstAttribute="trailing" secondItem="IGK-0r-UIL" secondAttribute="trailing" constant="50" id="TnN-mK-X7a"/>
                             <constraint firstItem="6y5-zs-Mac" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leadingMargin" id="Vf5-lN-hzy"/>
-                            <constraint firstItem="F6j-0X-BEI" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leading" id="WxJ-HC-pYU"/>
-                            <constraint firstItem="CxA-4j-LbK" firstAttribute="top" secondItem="o8M-kd-7mu" secondAttribute="bottom" constant="50" id="bMx-a6-7LC"/>
+                            <constraint firstItem="CxA-4j-LbK" firstAttribute="top" secondItem="o8M-kd-7mu" secondAttribute="bottom" constant="10" id="bMx-a6-7LC"/>
+                            <constraint firstItem="F6j-0X-BEI" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leading" id="c5b-mK-0Y3"/>
+                            <constraint firstAttribute="trailing" secondItem="F6j-0X-BEI" secondAttribute="trailing" id="cqM-hd-8NT"/>
                             <constraint firstItem="6y5-zs-Mac" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="eRB-OC-9Ck"/>
-                            <constraint firstAttribute="trailing" secondItem="F6j-0X-BEI" secondAttribute="trailing" id="gmw-dx-ije"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6y5-zs-Mac" secondAttribute="trailing" id="k9O-c1-SHx"/>
                             <constraint firstItem="CxA-4j-LbK" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="whY-qE-Rsu"/>
                         </constraints>
