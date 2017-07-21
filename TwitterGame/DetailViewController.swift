@@ -11,11 +11,17 @@ import UIKit
 class DetailViewController: UIViewController {
 
     var tweet: Tweet?
+    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var analysisLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tweetLabel.text = tweet?.tweetStr
+        
+        for key in (tweet?.tweetBreakup.keys)! {
+            analysisLabel.text = "\(key): \(tweet?.tweetBreakup.)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
