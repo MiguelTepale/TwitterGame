@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,38 +25,74 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IS THE TWEET POSITIVE, NEGATIVE, OR NEUTRAL?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-4j-LbK">
                                 <rect key="frame" x="91" y="114" width="193" height="65.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TWEET" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGK-0r-UIL">
                                 <rect key="frame" x="50" y="229.5" width="275" height="22"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUg-r4-kUq">
-                                <rect key="frame" x="161" y="445" width="53.5" height="22"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="F6j-0X-BEI">
+                                <rect key="frame" x="0.0" y="310" width="375" height="230"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-zs-Mac">
+                                <rect key="frame" x="16" y="548" width="343" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsk-5u-nDa">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Positive"/>
+                                        <connections>
+                                            <action selector="positiveButton:" destination="8Db-g5-m6z" eventType="touchUpInside" id="L82-td-cT3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-SE-Mo4">
+                                        <rect key="frame" x="123" y="0.0" width="97" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <color key="tintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Neutral"/>
+                                        <connections>
+                                            <action selector="neutralButton:" destination="8Db-g5-m6z" eventType="touchUpInside" id="sG9-Ck-9RE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBP-7f-vDA">
+                                        <rect key="frame" x="246" y="0.0" width="97" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Negative"/>
+                                        <connections>
+                                            <action selector="negativeButton:" destination="8Db-g5-m6z" eventType="touchUpInside" id="Pfm-b8-Dxa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="RUg-r4-kUq" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="34K-nh-Dn7"/>
+                            <constraint firstItem="F6j-0X-BEI" firstAttribute="top" secondItem="IGK-0r-UIL" secondAttribute="bottom" constant="58.5" id="4vB-ya-YeJ"/>
                             <constraint firstItem="IGK-0r-UIL" firstAttribute="top" secondItem="CxA-4j-LbK" secondAttribute="bottom" constant="50" id="8B4-L0-Lot"/>
+                            <constraint firstItem="6y5-zs-Mac" firstAttribute="top" secondItem="F6j-0X-BEI" secondAttribute="bottom" constant="8" id="9J7-y4-YeF"/>
                             <constraint firstItem="IGK-0r-UIL" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leading" constant="50" id="A15-7a-jcb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CxA-4j-LbK" secondAttribute="trailing" constant="75" id="C5U-b8-v4b"/>
                             <constraint firstItem="IGK-0r-UIL" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="KJD-SM-hbc"/>
+                            <constraint firstItem="F6j-0X-BEI" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="Rq5-3R-tmM"/>
                             <constraint firstItem="CxA-4j-LbK" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leadingMargin" constant="75" id="SY7-F2-CpW"/>
                             <constraint firstAttribute="trailing" secondItem="IGK-0r-UIL" secondAttribute="trailing" constant="50" id="TnN-mK-X7a"/>
+                            <constraint firstItem="6y5-zs-Mac" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leadingMargin" id="Vf5-lN-hzy"/>
+                            <constraint firstItem="F6j-0X-BEI" firstAttribute="leading" secondItem="fQ0-DI-hW4" secondAttribute="leading" id="WxJ-HC-pYU"/>
                             <constraint firstItem="CxA-4j-LbK" firstAttribute="top" secondItem="o8M-kd-7mu" secondAttribute="bottom" constant="50" id="bMx-a6-7LC"/>
-                            <constraint firstItem="Iba-hl-kts" firstAttribute="top" secondItem="RUg-r4-kUq" secondAttribute="bottom" constant="200" id="udd-ad-yXF"/>
+                            <constraint firstItem="6y5-zs-Mac" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="eRB-OC-9Ck"/>
+                            <constraint firstAttribute="trailing" secondItem="F6j-0X-BEI" secondAttribute="trailing" id="gmw-dx-ije"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6y5-zs-Mac" secondAttribute="trailing" id="k9O-c1-SHx"/>
                             <constraint firstItem="CxA-4j-LbK" firstAttribute="centerX" secondItem="fQ0-DI-hW4" secondAttribute="centerX" id="whY-qE-Rsu"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="tweetLbl" destination="IGK-0r-UIL" id="Nh7-gI-XB9"/>
                         <segue destination="wQ3-IE-yMa" kind="show" identifier="segueToResultsVC" id="aYr-IE-r1P"/>
                     </connections>
                 </viewController>
@@ -73,4 +109,7 @@
             <point key="canvasLocation" x="742" y="-196"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="550" height="230"/>
+    </resources>
 </document>

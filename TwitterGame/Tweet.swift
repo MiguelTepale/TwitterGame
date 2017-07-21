@@ -13,6 +13,7 @@ class Tweet {
     var tweetStr: String
     var statusOfTweet: String?
     var userChoice: String?
+    var isCorrect: Bool?
     var tweetBreakup = [String:String]()
     
     init(tweet:String) {
