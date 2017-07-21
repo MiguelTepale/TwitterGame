@@ -52,6 +52,7 @@ class Utilities {
             else {return}
         
         var request = URLRequest(url: url)
+        request.httpMethod = "POST"
         request.setValue("hGaVDVWgzMmsh6XN8RaifWxSAjKop1vUECRjsnXRPzlJAyJiWS", forHTTPHeaderField: "X-Mashape-Key")
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
