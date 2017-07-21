@@ -69,7 +69,7 @@ class Utilities {
             guard let json = try? JSONSerialization.jsonObject(with: urlData) as? [String: AnyObject] else {
                 return
             }
-            //Sentiment = [postive,negative,neutral]
+            //sentiment = [postive,negative, or neutral]
             guard let sentiment = json?["type"] as! String! else{
                 print("'Sentiment' value is nil")
                 return
@@ -83,7 +83,7 @@ class Utilities {
             }
             
             for values in keywords {
-                //keyword = e.g.[great,price,value,range]
+                //word = e.g.[great,price,value,range]
                 guard let word = values["word"] as! String? else {
                     return
                 }
