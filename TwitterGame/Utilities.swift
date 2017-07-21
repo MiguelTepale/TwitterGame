@@ -87,7 +87,7 @@ class Utilities {
                 guard let word = values["word"] as! String? else {
                     return
                 }
-                guard let score = values["score"] as! Double? else {
+                guard let score = values["score"] as! Double! else {
                     return
                 }
                 
