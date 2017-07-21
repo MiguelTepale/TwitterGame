@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,36 @@
                     <view key="view" contentMode="scaleToFill" id="OxJ-hQ-bn6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Emotions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-fF-raz">
+                                <rect key="frame" x="91.5" y="156" width="192.5" height="29"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sentiment" translatesAutoresizingMaskIntoConstraints="NO" id="0Dx-pL-7P5">
+                                <rect key="frame" x="17" y="256.5" width="340" height="154"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orb-7c-uCY">
+                                <rect key="frame" x="135.5" y="526" width="103" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="PLAY"/>
+                                <connections>
+                                    <segue destination="5CT-dD-89d" kind="presentation" id="n0W-bQ-oXH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="orb-7c-uCY" firstAttribute="top" secondItem="0Dx-pL-7P5" secondAttribute="bottom" constant="115.5" id="8yH-kv-xz1"/>
+                            <constraint firstItem="orb-7c-uCY" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="FnC-Mb-wxY"/>
+                            <constraint firstItem="0Dx-pL-7P5" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="OnU-D4-2BY"/>
+                            <constraint firstItem="orb-7c-uCY" firstAttribute="width" secondItem="0Dx-pL-7P5" secondAttribute="height" multiplier="60:90" id="hLP-9q-3EG"/>
+                            <constraint firstItem="p7h-fF-raz" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="hRi-ub-C3M"/>
+                            <constraint firstItem="0Dx-pL-7P5" firstAttribute="centerY" secondItem="OxJ-hQ-bn6" secondAttribute="centerY" id="kwG-wP-ocy"/>
+                            <constraint firstItem="0Dx-pL-7P5" firstAttribute="top" secondItem="p7h-fF-raz" secondAttribute="bottom" constant="71.5" id="uHD-Ki-Yye"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yMY-T8-Nku"/>
                     <connections>
@@ -58,4 +88,10 @@
             <point key="canvasLocation" x="-264" y="-195"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sentiment" width="340" height="154"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sNp-Kl-Fma"/>
+    </inferredMetricsTieBreakers>
 </document>
