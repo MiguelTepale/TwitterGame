@@ -25,6 +25,7 @@
 		E8E12EE81F2154F7006F99DA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E12EE71F2154F7006F99DA /* Utilities.swift */; };
 		E8E12EEA1F2155DB006F99DA /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E12EE91F2155DB006F99DA /* DAO.swift */; };
 		E8E12EEC1F2158A5006F99DA /* ListOfNames in Resources */ = {isa = PBXBuildFile; fileRef = E8E12EEB1F2158A5006F99DA /* ListOfNames */; };
+		E8E996181F226BC4007A677F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E996171F226BC4007A677F /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E8E12EE71F2154F7006F99DA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E8E12EE91F2155DB006F99DA /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		E8E12EEB1F2158A5006F99DA /* ListOfNames */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ListOfNames; sourceTree = "<group>"; };
+		E8E996171F226BC4007A677F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				E8E12EEB1F2158A5006F99DA /* ListOfNames */,
 				8CC3BD981F2119E100FBBBC2 /* AppDelegate.swift */,
+				E8E996171F226BC4007A677F /* Reachability.swift */,
 				E8E12EE51F2145BA006F99DA /* Tweet.swift */,
 				E8E12EE71F2154F7006F99DA /* Utilities.swift */,
 				E8E12EE91F2155DB006F99DA /* DAO.swift */,
@@ -261,6 +264,7 @@
 				E8E12EE61F2145BA006F99DA /* Tweet.swift in Sources */,
 				8CC3BD991F2119E100FBBBC2 /* AppDelegate.swift in Sources */,
 				8CC3BDB81F21338200FBBBC2 /* StartViewController.swift in Sources */,
+				E8E996181F226BC4007A677F /* Reachability.swift in Sources */,
 				8CC3BDBA1F2133AD00FBBBC2 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

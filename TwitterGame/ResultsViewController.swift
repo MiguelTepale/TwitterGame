@@ -31,13 +31,20 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func playAgainButton(_ sender: UIButton) {
-        self.mysharedManager.tweetsArray.removeAll()
-        self.mysharedManager.numCorrect = 0
-        self.mysharedManager.downloadTweets(completion: {
-            self.mysharedManager.getSentiments()
-            self.navigationController?.popViewController(animated: true)
-        })
+        let status = Reachability.status()
         
+        if status == .reachable {
+            self.mysharedManager.tweetsArray.removeAll()
+            self.mysharedManager.numCorrect = 0
+            self.mysharedManager.downloadTweets(completion: {
+                self.mysharedManager.getSentiments()
+                self.navigationController?.popViewController(animated: true)
+            })
+        } else {
+            let alert = UIAlertController(title: "Error, No Network!", message: "Please check your network settings.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
