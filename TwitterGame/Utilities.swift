@@ -16,7 +16,7 @@ class Utilities {
         
         var tweetArr = [Tweet]()
         let client = TWTRAPIClient()
-        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=\(handle)&count=2"
+        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=\(handle)&count=5"
         var clientError : NSError?
         
         let request = client.urlRequest(withMethod: "GET", url: endpoint, parameters: nil, error: &clientError)

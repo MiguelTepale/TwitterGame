@@ -8,6 +8,7 @@
 
 import UIKit
 import TwitterKit
+import AVFoundation
 
 class StartViewController: UIViewController {
     
@@ -29,7 +30,10 @@ class StartViewController: UIViewController {
         
         mysharedManager.loadDataFromTxtFile()
         
-        
+        audioPlayer = try! AVAudioPlayer(contentsOf: bgMusic as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        audioPlayer.numberOfLoops = -1
         
         if status == .reachable {
             mysharedManager.downloadTweets(completion: {
