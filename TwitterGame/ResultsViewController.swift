@@ -17,6 +17,14 @@ class ResultsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func analyzeTweetButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func playAgainButton(_ sender: UIButton) {
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -62,6 +62,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="analyzeTweetButton:" destination="46e-7v-cwh" eventType="touchUpInside" id="Yom-Ji-eCi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVQ-LQ-GRa">
                                         <rect key="frame" x="10" y="305.5" width="48" height="55.5"/>
@@ -78,6 +81,9 @@ Again</string>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="playAgainButton:" destination="46e-7v-cwh" eventType="touchUpInside" id="95L-lo-IR4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
