@@ -30,6 +30,16 @@ class ResultsViewController: UIViewController {
         self.performSegue(withIdentifier: "segueToTableVC", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueToTableVC" {
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Game"
+            navigationItem.backBarButtonItem = backItem
+        }
+    }
+    
     @IBAction func playAgainButton(_ sender: UIButton) {
         let status = Reachability.status()
         

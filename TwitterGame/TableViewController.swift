@@ -18,9 +18,18 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.navigationBar.isHidden = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +58,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         selectedTweet = mysharedManager.tweetsArray[indexPath.row]
         self.performSegue(withIdentifier: "segueToDetailVC", sender: self)
     }
@@ -60,6 +70,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Passing Tweet object to DetailVC
         if segue.identifier == "segueToDetailVC" {
+            
+            //set 'back' button title
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+            
             if let detailVC = segue.destination as? DetailViewController {
                 detailVC.tweet = selectedTweet
             }

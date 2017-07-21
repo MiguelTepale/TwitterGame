@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .default
         guard let author = mysharedManager.tweeter else { return }
         tweetLabel.text = (tweet?.tweetStr)! + "\n- \(author)"
         guard let status = tweet?.statusOfTweet else { return }
@@ -32,7 +33,12 @@ class DetailViewController: UIViewController {
         }
         analysisLabel.text = analysisText
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

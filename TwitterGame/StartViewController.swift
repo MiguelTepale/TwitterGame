@@ -27,6 +27,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.shared.statusBarStyle = .lightContent
         self.navigationController?.navigationBar.isHidden = true
         
         self.activityIndicator.startAnimating()
