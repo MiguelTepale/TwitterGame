@@ -37,23 +37,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="PLAY"/>
                                 <connections>
-                                    <segue destination="5CT-dD-89d" kind="presentation" id="n0W-bQ-oXH"/>
+                                    <action selector="playButton:" destination="DjE-VN-9yR" eventType="touchUpInside" id="E8S-WC-fFV"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-rb-twU">
+                                <rect key="frame" x="169" y="476" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="orb-7c-uCY" firstAttribute="top" secondItem="0Dx-pL-7P5" secondAttribute="bottom" constant="115.5" id="8yH-kv-xz1"/>
+                            <constraint firstItem="pfx-rb-twU" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="Er5-AC-YWu"/>
                             <constraint firstItem="orb-7c-uCY" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="FnC-Mb-wxY"/>
                             <constraint firstItem="0Dx-pL-7P5" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="OnU-D4-2BY"/>
                             <constraint firstItem="orb-7c-uCY" firstAttribute="width" secondItem="0Dx-pL-7P5" secondAttribute="height" multiplier="60:90" id="hLP-9q-3EG"/>
                             <constraint firstItem="p7h-fF-raz" firstAttribute="centerX" secondItem="OxJ-hQ-bn6" secondAttribute="centerX" id="hRi-ub-C3M"/>
                             <constraint firstItem="0Dx-pL-7P5" firstAttribute="centerY" secondItem="OxJ-hQ-bn6" secondAttribute="centerY" id="kwG-wP-ocy"/>
                             <constraint firstItem="0Dx-pL-7P5" firstAttribute="top" secondItem="p7h-fF-raz" secondAttribute="bottom" constant="71.5" id="uHD-Ki-Yye"/>
+                            <constraint firstItem="orb-7c-uCY" firstAttribute="top" secondItem="pfx-rb-twU" secondAttribute="bottom" constant="13" id="v9V-n3-Dlz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yMY-T8-Nku"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="pfx-rb-twU" id="X6C-Wj-9Z7"/>
+                        <outlet property="playBtn" destination="orb-7c-uCY" id="ogq-VK-j4r"/>
                         <segue destination="5CT-dD-89d" kind="show" identifier="segueToGameVC" id="sNp-Kl-Fma"/>
                     </connections>
                 </viewController>
@@ -91,7 +98,4 @@
     <resources>
         <image name="sentiment" width="340" height="154"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="sNp-Kl-Fma"/>
-    </inferredMetricsTieBreakers>
 </document>
