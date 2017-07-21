@@ -89,7 +89,7 @@ class Utilities {
                 tweet.tweetBreakup[word] = String(score)
             }
             print("Tweet Makeup: \(tweet.tweetBreakup)")
-            print("Sentiment: \(tweet.statusOfTweet)\n")
+            print("Sentiment: \(String(describing: tweet.statusOfTweet))\n")
         }.resume()
     }
 }

@@ -16,6 +16,8 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+        
         mysharedManager.loadDataFromTxtFile()
 
         mysharedManager.downloadTweets(completion: {
