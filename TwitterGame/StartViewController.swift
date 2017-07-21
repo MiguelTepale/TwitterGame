@@ -13,8 +13,8 @@ import AVFoundation
 class StartViewController: UIViewController {
     
     let mysharedManager = DAO.sharedManager
-//    var bgMusic = NSURL(fileURLWithPath:Bundle.main.path(forResource:"Aerosmith - Sweet Emotion", ofType: "mp3")!)
-//    var audioPlayer = AVAudioPlayer()
+    var bgMusic = NSURL(fileURLWithPath:Bundle.main.path(forResource:"Aerosmith - Sweet Emotion", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
 
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -39,10 +39,10 @@ class StartViewController: UIViewController {
             }
         })
         
-//        audioPlayer = try! AVAudioPlayer(contentsOf: bgMusic as URL)
-//        audioPlayer.prepareToPlay()
-//        audioPlayer.play()
-//        audioPlayer.numberOfLoops = -1
+        audioPlayer = try! AVAudioPlayer(contentsOf: bgMusic as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        audioPlayer.numberOfLoops = -1
         
     }
     
