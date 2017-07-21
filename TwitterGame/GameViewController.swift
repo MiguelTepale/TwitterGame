@@ -27,6 +27,12 @@ class GameViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+        index = 0
+    }
+    
     @IBAction func positiveButton(_ sender: Any) {
         mysharedManager.tweetsArray[index].userChoice = "Positive"
         if currentTweet?.statusOfTweet?.lowercased() == "positive" {

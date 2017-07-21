@@ -16,11 +16,15 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         keepScoreLabel.text = "\(mysharedManager.numCorrect)/\(mysharedManager.tweetsArray.count)"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     @IBAction func analyzeTweetButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "segueToTableVC", sender: self)

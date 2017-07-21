@@ -38,6 +38,7 @@ class Utilities {
             }
             completion(tweetArr)
         }
+        
     }
     
     static func initiateSentimentAnalysisAPI(tweet:Tweet) {

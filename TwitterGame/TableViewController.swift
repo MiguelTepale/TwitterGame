@@ -50,12 +50,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTweet = mysharedManager.tweetsArray[indexPath.row]
-        self.performSegue(withIdentifier: "pushToDetailVC", sender: self)
+        self.performSegue(withIdentifier: "segueToDetailVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Passing Tweet object to DetailVC
-        if segue.identifier == "pushToDetailVC" {
+        if segue.identifier == "segueToDetailVC" {
             if let detailVC = segue.destination as? DetailViewController {
                 detailVC.tweet = selectedTweet
             }
