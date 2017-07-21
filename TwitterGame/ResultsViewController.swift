@@ -10,6 +10,8 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var keepScoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
