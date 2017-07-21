@@ -12,18 +12,28 @@ class ResultsViewController: UIViewController {
 
     @IBOutlet weak var keepScoreLabel: UILabel!
     
+    let mysharedManager = DAO.sharedManager
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        keepScoreLabel.text = "\(mysharedManager.numCorrect)/\(mysharedManager.tweetsArray.count)"
     }
     
     
     @IBAction func analyzeTweetButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueToTableVC", sender: self)
     }
     
-    
     @IBAction func playAgainButton(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: {
+            self.mysharedManager.tweetsArray.removeAll()
+            self.mysharedManager.numCorrect = 0
+            self.mysharedManager.downloadTweets(completion: {
+                self.mysharedManager.getSentiments()
+            })
+        })
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,7 +16,7 @@ class Utilities {
         
         var tweetArr = [Tweet]()
         let client = TWTRAPIClient()
-        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=realDonaldTrump&count=2"
+        let endpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=\(handle)&count=2"
         var clientError : NSError?
         
         let request = client.urlRequest(withMethod: "GET", url: endpoint, parameters: nil, error: &clientError)
@@ -26,7 +26,10 @@ class Utilities {
                 print("Error: \(connectionError ?? "IUNNO" as! Error)")
             }
             
-            guard let json = try? JSONSerialization.jsonObject(with: data!) as? [[String: AnyObject]]
+            guard let myData:Data = data
+                else {return}
+            
+            guard let json = try? JSONSerialization.jsonObject(with: myData) as? [[String: AnyObject]]
                 else {return}
             for element in json! {
                 let newTweet = Tweet(tweet: element["text"] as! String)

@@ -18,7 +18,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.isHidden = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -43,7 +43,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "Tweet # \(indexPath.row)"
+        cell.textLabel?.text = "Tweet # \(indexPath.row + 1)"
         
         return cell
     }

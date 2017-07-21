@@ -61,8 +61,7 @@ class GameViewController: UIViewController {
             currentTweet = mysharedManager.tweetsArray[index]
         } else {
             print("Game Over!")
-            let resultsVC:UIViewController = UIStoryboard(name: "Results", bundle: nil).instantiateViewController(withIdentifier: "ResultsVC") as UIViewController
-            self.present(resultsVC, animated: false, completion: nil)
+            self.performSegue(withIdentifier: "segueToResultsVC", sender: self)
         }
         
     }
