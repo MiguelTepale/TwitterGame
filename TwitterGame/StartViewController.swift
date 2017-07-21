@@ -20,6 +20,10 @@ class StartViewController: UIViewController {
     
     let mysharedManager = DAO.sharedManager
     
+    var bgMusic = NSURL(fileURLWithPath:Bundle.main.path(forResource:"Aerosmith - Sweet Emotion", ofType: "mp3")!)
+    
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +38,7 @@ class StartViewController: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         audioPlayer.numberOfLoops = -1
+        
         
         if status == .reachable {
             mysharedManager.downloadTweets(completion: {
